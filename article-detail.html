@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html class="dark" lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Detail Artikel - Muhammad Affizar</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0EA5E9",
+                        "background-dark": "#020617",
+                        "surface": "#0F172A",
+                        "surface-light": "#1E293B",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #020617;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #0EA5E9;
+            border-radius: 4px;
+        }
+
+        /* Typography for Article Content */
+        .prose h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .prose h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: #e2e8f0;
+        }
+
+        .prose p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: #cbd5e1;
+        }
+
+        .prose ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #cbd5e1;
+        }
+
+        .prose li {
+            margin-bottom: 0.5rem;
+        }
+
+        .prose strong {
+            color: #0EA5E9;
+        }
+    </style>
+</head>
+
+<body class="bg-background-dark text-white font-display selection:bg-primary/30 min-h-screen flex flex-col">
+
+    <!-- Sticky Header -->
+    <header
+        class="fixed top-0 left-0 right-0 z-50 bg-background-dark/80 backdrop-blur-md border-b border-surface-light">
+        <div class="flex items-center justify-between p-4 max-w-7xl mx-auto">
+            <a href="index.html" class="flex items-center gap-3 relative z-[70]">
+                <div
+                    class="size-10 bg-gradient-to-br from-primary to-blue-600 rounded-full flex items-center justify-center shadow-[0_0_15px_rgba(14,165,233,0.5)]">
+                    <span class="font-serif font-bold text-white text-lg">A</span>
+                </div>
+                <span class="font-bold tracking-tight text-xl uppercase hidden sm:block">Affizar<span
+                        class="text-primary">.Official</span></span>
+            </a>
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="index.html"
+                    class="text-sm font-semibold uppercase tracking-wider text-white/70 hover:text-white transition-colors">Beranda</a>
+                <a href="about.html"
+                    class="text-sm font-semibold uppercase tracking-wider text-white/70 hover:text-white transition-colors">Tentang
+                    Kami</a>
+                <a href="services.html"
+                    class="text-sm font-semibold uppercase tracking-wider text-white/70 hover:text-white transition-colors">Layanan</a>
+                <a href="blog.html" class="text-sm font-bold uppercase tracking-wider text-primary">Artikel</a>
+                <a href="contact.html"
+                    class="text-sm font-semibold uppercase tracking-wider text-white/70 hover:text-white transition-colors">Kontak</a>
+            </nav>
+            <button id="mobile-menu-btn"
+                class="md:hidden size-10 flex items-center justify-center rounded-full bg-surface-light hover:bg-surface text-white relative z-[70]">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+        <div id="mobile-menu"
+            class="fixed inset-0 bg-background-dark/98 backdrop-blur-xl z-[60] transform translate-x-full transition-transform duration-300 md:hidden flex flex-col items-center justify-start gap-8 pt-32 pb-10 overflow-y-auto">
+            <a href="index.html" class="text-2xl font-serif text-white hover:text-primary transition-colors">Beranda</a>
+            <a href="about.html" class="text-2xl font-serif text-white hover:text-primary transition-colors">Tentang
+                Kami</a>
+            <a href="services.html"
+                class="text-2xl font-serif text-white hover:text-primary transition-colors">Layanan</a>
+            <a href="blog.html" class="text-2xl font-serif text-primary">Artikel</a>
+            <a href="contact.html"
+                class="text-2xl font-serif text-white hover:text-primary transition-colors">Kontak</a>
+        </div>
+    </header>
+
+    <main class="flex-grow pt-24 pb-20">
+        <div class="max-w-4xl mx-auto px-6">
+
+            <!-- Breadcrumb -->
+            <div class="flex items-center gap-2 text-xs uppercase tracking-widest text-white/50 mb-6">
+                <a href="index.html" class="hover:text-primary">Home</a> /
+                <a href="blog.html" class="hover:text-primary">Artikel</a> /
+                <span class="text-white">Detail</span>
+            </div>
+
+            <!-- Title -->
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight mb-8">5 Teknik Mengatasi
+                Demam Panggung untuk Pemula</h1>
+
+            <!-- Author Meta -->
+            <div class="flex items-center gap-4 mb-8">
+                <img src="assets/images/about.png"
+                    class="size-12 rounded-full border border-primary p-0.5 object-cover">
+                <div>
+                    <p class="font-bold text-white">Muhammad Affizar</p>
+                    <p class="text-xs text-white/50 uppercase">Oct 12, 2025 • 5 min read</p>
+                </div>
+            </div>
+
+            <!-- Main Image -->
+            <figure class="mb-12">
+                <img src="assets/images/hero.png" class="w-full rounded-3xl border border-white/10 shadow-2xl mb-4">
+                <figcaption class="text-center text-sm text-white/40 italic">Ilustrasi berbicara di depan umum dengan
+                    percaya diri.</figcaption>
+            </figure>
+
+            <!-- Table of Contents -->
+            <div class="bg-surface border border-white/5 rounded-2xl p-6 mb-12">
+                <div class="flex items-center justify-between mb-4 cursor-pointer" onclick="toggleTOC()">
+                    <h3 class="font-bold uppercase tracking-widest text-sm text-primary">Daftar Isi</h3>
+                    <span class="material-symbols-outlined transition-transform" id="toc-icon">expand_more</span>
+                </div>
+                <nav id="toc-content" class="hidden space-y-2 text-sm text-white/70">
+                    <!-- JS will populate this -->
+                </nav>
+            </div>
+
+            <!-- Article Content -->
+            <article class="prose max-w-none text-lg" id="article-body">
+                <p>Berbicara di depan umum adalah ketakutan terbesar bagi banyak orang, bahkan melebihi ketakutan akan
+                    kematian menurut beberapa survei. Namun, sebagai seorang pemimpin atau pelajar, skillset ini sangat
+                    krusial.</p>
+
+                <blockquote
+                    class="bg-primary/10 border-l-4 border-primary p-6 my-8 rounded-r-xl italic text-white/90 font-serif text-xl">
+                    "Keberanian bukanlah ketiadaan rasa takut, tetapi kemampuan untuk bertindak meskipun merasa takut."
+                </blockquote>
+
+                <h2>1. Persiapan Adalah Kunci</h2>
+                <p>90% kegugupan berasal dari ketidaksiapan. Pastikan Anda menguasai materi Anda luar dalam. Latihlah
+                    pidato Anda setidaknya 5-10 kali di depan cermin atau rekam menggunakan smartphone Anda.</p>
+
+                <div class="bg-surface-light border border-white/5 p-4 rounded-xl my-6">
+                    <p class="font-bold text-primary mb-2 text-sm uppercase">Baca Juga:</p>
+                    <a href="#" class="block text-white hover:text-primary transition-colors mb-2">→ Struktur Pidato
+                        yang Memikat Audiens</a>
+                    <a href="#" class="block text-white hover:text-primary transition-colors">→ Seni Memimpin Teman
+                        Sebaya</a>
+                </div>
+
+                <h2>2. Teknik Pernapasan</h2>
+                <p>Sebelum naik ke panggung, lakukan pernapasan diafragma (pernapasan perut). Tarik napas 4 detik, tahan
+                    4 detik, dan hembuskan 4 detik. Ini akan menurunkan detak jantung Anda secara fisiologis.</p>
+
+                <h3>Mengapa Ini Efektif?</h3>
+                <p>Saat gugup, kita cenderung bernapas pendek (dada), yang mengirim sinyal "bahaya" ke otak. Dengan
+                    memperlambat napas, kita memberitahu otak bahwa "semua aman".</p>
+
+                <!-- Promo GIF -->
+                <figure class="my-10">
+                    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3h5eWxrbnZ6eWxrbnZ6eWxrbnZ6eWxrbnZ6eWxrbnZ6eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0HlHFRbmaZtBRhXG/giphy.gif"
+                        alt="Confident Speaking GIF"
+                        class="w-full rounded-2xl border border-white/10 opacity-80 hover:opacity-100 transition-opacity">
+                    <figcaption class="text-center text-sm text-white/40 italic mt-2">Percaya diri adalah tentang
+                        mindset.</figcaption>
+                </figure>
+
+                <h2>3. Visualisasi Positif</h2>
+                <p>Bayangkan Anda sukses menyampaikan pidato dan audiens bertepuk tangan. Atlet profesional menggunakan
+                    teknik ini sebelum bertanding.</p>
+
+                <h2>4. Fokus pada Pemberian, Bukan Penilaian</h2>
+                <p>Ubahlah mindset dari "Bagaimana jika mereka menilai saya jelek?" menjadi "Saya punya informasi
+                    berharga yang bisa membantu mereka."</p>
+
+                <!-- Support Image -->
+                <figure class="my-8">
+                    <img src="assets/images/service.png" class="w-full rounded-2xl">
+                    <figcaption class="text-center text-sm text-white/40 italic mt-2">Interaksi dengan audiens
+                        mengurangi ketegangan.</figcaption>
+                </figure>
+
+                <h2>5. The Power Pose</h2>
+                <p>Berdiri tegak dengan tangan terbuka selama 2 menit sebelum tampil dapat meningkatkan testosteron
+                    (dominasi) dan menurunkan kortisol (stress).</p>
+
+                <div class="bg-surface border border-white/10 rounded-2xl p-8 mt-12">
+                    <h3 class="!mt-0 !mb-6 text-xl">FAQ (Pertanyaan Umum)</h3>
+                    <div class="space-y-4">
+                        <details class="group">
+                            <summary
+                                class="flex justify-between items-center cursor-pointer list-none bg-background-dark p-4 rounded-lg">
+                                <span class="font-bold">Apakah demam panggung bisa hilang total?</span>
+                                <span
+                                    class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+                            </summary>
+                            <div class="p-4 text-white/70 text-sm">
+                                Tidak sepenuhnya, dan itu bagus. Sedikit rasa gugup menjaga kita tetap waspada dan
+                                energik.
+                            </div>
+                        </details>
+                        <details class="group">
+                            <summary
+                                class="flex justify-between items-center cursor-pointer list-none bg-background-dark p-4 rounded-lg">
+                                <span class="font-bold">Berapa lama waktu latihan yang ideal?</span>
+                                <span
+                                    class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+                            </summary>
+                            <div class="p-4 text-white/70 text-sm">
+                                Tergantung durasi pidato, tetapi kaidah umumnya adalah 1 jam latihan untuk setiap 1
+                                menit pidato penting.
+                            </div>
+                        </details>
+                    </div>
+                </div>
+
+                <h2>Kesimpulan</h2>
+                <p>Demam panggung adalah hal yang wajar. Dengan persiapan matang dan teknik pernapasan yang tepat, Anda
+                    bisa mengubah rasa takut menjadi bahan bakar untuk penampilan yang luar biasa. Ingat, audiens ingin
+                    Anda sukses.</p>
+            </article>
+
+            <!-- Promo GIF Bottom -->
+            <div class="my-12">
+                <img src="https://media.giphy.com/media/3o7TKr3nzbh5WgCFxe/giphy.gif"
+                    class="w-full h-32 object-cover rounded-xl opacity-50">
+            </div>
+
+            <!-- Share & Tags -->
+            <div
+                class="border-t border-b border-white/10 py-8 my-12 flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex gap-2 text-sm font-bold uppercase tracking-wide">
+                    <span class="bg-surface px-3 py-1 rounded text-white/60">#PublicSpeaking</span>
+                    <span class="bg-surface px-3 py-1 rounded text-white/60">#Tips</span>
+                </div>
+                <div class="flex items-center gap-4">
+                    <span class="text-sm font-bold uppercase text-white/50">Share:</span>
+                    <a href="#"
+                        class="size-10 bg-blue-600 rounded-full flex items-center justify-center hover:-translate-y-1 transition-transform"><span
+                            class="material-symbols-outlined text-white text-lg">share</span></a>
+                    <a href="https://wa.me/?text=Cek artikel keren ini!"
+                        class="size-10 bg-green-500 rounded-full flex items-center justify-center hover:-translate-y-1 transition-transform"><img
+                            src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                            class="size-5 filter invert brightness-0"></a>
+                </div>
+            </div>
+
+            <!-- Author Profile -->
+            <div
+                class="bg-surface rounded-3xl p-8 md:p-10 flex flex-col md:flex-row gap-8 items-center text-center md:text-left border border-white/5">
+                <img src="assets/images/about.png" class="size-32 rounded-full border-4 border-primary object-cover">
+                <div>
+                    <h3 class="text-2xl font-serif font-bold mb-2">Muhammad Affizar Ibrahim Alkuatsar</h3>
+                    <p class="text-primary font-bold text-xs uppercase tracking-widest mb-4">Content Creator • Public
+                        Speaker</p>
+                    <p class="text-white/60 text-sm leading-relaxed mb-6">
+                        Mantan Ketua OSIS (2 Periode) yang kini aktif sebagai pembicara publik dan konsultan event
+                        sekolah. Berdedikasi untuk membantu pelajar Indonesia menemukan potensi kepemimpinan terbaik
+                        mereka.
+                    </p>
+                    <div class="flex gap-4 justify-center md:justify-start">
+                        <a href="#" class="text-white/50 hover:text-white">Instagram</a>
+                        <a href="#" class="text-white/50 hover:text-white">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Articles -->
+            <div class="mt-20">
+                <h3 class="text-2xl font-serif font-bold mb-8">Artikel Terkait</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Related 1 -->
+                    <div class="group bg-surface rounded-2xl overflow-hidden border border-white/5">
+                        <div class="h-40 overflow-hidden">
+                            <img src="assets/images/about.png"
+                                class="w-full h-full object-cover transition-transform group-hover:scale-105">
+                        </div>
+                        <div class="p-6">
+                            <h4 class="font-bold mb-2 line-clamp-2 text-lg">Leadership vs Bossy</h4>
+                            <p class="text-xs text-white/50 mb-4 line-clamp-2">Perbedaan mendasar antara memimpin dan
+                                menyuruh.</p>
+                            <a href="article-detail.html"
+                                class="text-primary text-xs font-bold uppercase tracking-wider hover:underline">Baca
+                                Selengkapnya</a>
+                        </div>
+                    </div>
+                    <!-- Related 2 -->
+                    <div class="group bg-surface rounded-2xl overflow-hidden border border-white/5">
+                        <div class="h-40 overflow-hidden">
+                            <img src="assets/images/hero.png"
+                                class="w-full h-full object-cover transition-transform group-hover:scale-105">
+                        </div>
+                        <div class="p-6">
+                            <h4 class="font-bold mb-2 line-clamp-2 text-lg">Trik Bangun Pagi</h4>
+                            <p class="text-xs text-white/50 mb-4 line-clamp-2">Mulai harimu lebih awal untuk
+                                produktivitas maksimal.</p>
+                            <a href="article-detail.html"
+                                class="text-primary text-xs font-bold uppercase tracking-wider hover:underline">Baca
+                                Selengkapnya</a>
+                        </div>
+                    </div>
+                    <!-- Related 3 -->
+                    <div class="group bg-surface rounded-2xl overflow-hidden border border-white/5">
+                        <div class="h-40 overflow-hidden">
+                            <img src="assets/images/service.png"
+                                class="w-full h-full object-cover transition-transform group-hover:scale-105">
+                        </div>
+                        <div class="p-6">
+                            <h4 class="font-bold mb-2 line-clamp-2 text-lg">Tips Networking</h4>
+                            <p class="text-xs text-white/50 mb-4 line-clamp-2">Cara berkenalan dengan orang baru tanpa
+                                canggung.</p>
+                            <a href="article-detail.html"
+                                class="text-primary text-xs font-bold uppercase tracking-wider hover:underline">Baca
+                                Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface pt-16 pb-8 px-6 border-t border-white/5 relative z-10 mt-20">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+            <div class="md:col-span-2 space-y-6">
+                <div class="flex items-center gap-2">
+                    <div class="size-8 bg-primary rounded-lg flex items-center justify-center">
+                        <span class="font-serif font-bold text-white">A</span>
+                    </div>
+                    <span class="font-bold text-xl uppercase tracking-tight">Affizar</span>
+                </div>
+                <p class="text-white/50 text-sm leading-relaxed max-w-sm">
+                    Menenun kata, membangun impian.
+                </p>
+            </div>
+            <div>
+                <h4 class="text-primary font-bold uppercase tracking-widest text-xs mb-6">Navigasi</h4>
+                <div class="flex flex-col gap-3">
+                    <a href="index.html" class="text-white/60 hover:text-white transition-colors text-sm">Beranda</a>
+                    <a href="about.html" class="text-white/60 hover:text-white transition-colors text-sm">Tentang</a>
+                    <a href="services.html" class="text-white/60 hover:text-white transition-colors text-sm">Layanan</a>
+                    <a href="contact.html" class="text-white/60 hover:text-white transition-colors text-sm">Kontak</a>
+                </div>
+            </div>
+        </div>
+        <div
+            class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-white/30 uppercase tracking-widest">
+            <p>© 2026 Affizar Official.</p>
+        </div>
+    </footer>
+
+    <div class="fixed bottom-6 right-6 z-[60] flex flex-col gap-4 items-center">
+        <!-- Scroll Top -->
+        <button id="scrollToTop"
+            class="size-12 bg-surface border border-white/20 text-white rounded-full flex items-center justify-center shadow-lg opacity-0 translate-y-4 transition-all duration-300 pointer-events-none data-[visible=true]:opacity-100 data-[visible=true]:translate-y-0 data-[visible=true]:pointer-events-auto hover:bg-primary hover:border-primary">
+            <span class="material-symbols-outlined">arrow_upward</span>
+        </button>
+        <a href="https://wa.me/6281234567890" target="_blank"
+            class="size-14 bg-green-500 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:scale-110 transition-transform animate-bounce-subtle">
+            <svg fill="currentColor" width="28" height="28" viewBox="0 0 16 16">
+                <path
+                    d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93a7.898 7.898 0 0 0-2.327-5.607zM7.994 14.52a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+            </svg>
+        </a>
+    </div>
+
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        let isMenuOpen = false;
+        menuBtn.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                menu.classList.remove('translate-x-full');
+                menuBtn.innerHTML = '<span class="material-symbols-outlined">close</span>';
+                document.body.style.overflow = 'hidden';
+            } else {
+                menu.classList.add('translate-x-full');
+                menuBtn.innerHTML = '<span class="material-symbols-outlined">menu</span>';
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Scroll Top
+        const scrollBtn = document.getElementById('scrollToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                scrollBtn.setAttribute('data-visible', 'true');
+            } else {
+                scrollBtn.setAttribute('data-visible', 'false');
+            }
+        });
+        scrollBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        // TOC Generation Logic
+        function generateTOC() {
+            const articleBody = document.getElementById('article-body');
+            const tocContent = document.getElementById('toc-content');
+            if (!articleBody || !tocContent) return;
+            const headers = articleBody.querySelectorAll('h2, h3');
+
+            headers.forEach((header, index) => {
+                const id = 'header-' + index;
+                header.id = id;
+
+                const link = document.createElement('a');
+                link.href = '#' + id;
+                link.textContent = header.textContent;
+                link.className = 'block hover:text-primary transition-colors ' + (header.tagName === 'H3' ? 'pl-4 text-xs' : 'font-bold');
+
+                tocContent.appendChild(link);
+            });
+        }
+
+        // Toggle TOC
+        window.toggleTOC = function () {
+            const content = document.getElementById('toc-content');
+            const icon = document.getElementById('toc-icon');
+
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                content.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', generateTOC);
+    </script>
+</body>
+
+</html>

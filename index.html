@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html class="dark" lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Beranda - Muhammad Affizar Ibrahim Alkuatsar</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0EA5E9",
+                        "primary-glow": "#38BDF8",
+                        "background-dark": "#020617",
+                        "surface": "#0F172A",
+                        "surface-light": "#1E293B",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                    borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .bg-grid-pattern {
+            background-image: linear-gradient(to right, #1e293b 1px, transparent 1px),
+                linear-gradient(to bottom, #1e293b 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #020617;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #0EA5E9;
+            border-radius: 4px;
+        }
+
+        /* Mobile Menu Fix */
+        #mobile-menu {
+            padding-top: 5rem;
+            /* Avoid overlap with top bar */
+        }
+    </style>
+</head>
+
+<body class="bg-background-dark text-white font-display selection:bg-primary/30 min-h-screen flex flex-col">
+
+    <!-- Sticky Header -->
+    <header
+        class="fixed top-0 left-0 right-0 z-50 bg-background-dark/90 backdrop-blur-md border-b border-surface-light">
+        <div class="flex items-center justify-between p-4 max-w-7xl mx-auto">
+            <a href="index.html" class="flex items-center gap-3 relative z-[70]">
+                <div
+                    class="size-10 bg-gradient-to-br from-primary to-blue-600 rounded-full flex items-center justify-center shadow-[0_0_15px_rgba(14,165,233,0.5)]">
+                    <span class="font-serif font-bold text-white text-lg">A</span>
+                </div>
+                <span class="font-bold tracking-tight text-xl uppercase hidden sm:block">Affizar<span
+                        class="text-primary">.Official</span></span>
+            </a>
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="index.html" class="text-sm font-bold uppercase tracking-wider text-primary">Beranda</a>
+                <a href="about.html"
+                    class="text-sm font-semibold uppercase tracking-wider text-white/70 hover:text-white transition-colors">Tentang
+                    Kami</a>
+                <a href="services.html"
+                    class="text-sm font-semibold uppercase tracking-wider text-white/70 hover:text-white transition-colors">Layanan</a>
+                <a href="blog.html"
+                    class="text-sm font-semibold uppercase tracking-wider text-white/70 hover:text-white transition-colors">Artikel</a>
+                <a href="contact.html"
+                    class="text-sm font-semibold uppercase tracking-wider text-white/70 hover:text-white transition-colors">Kontak</a>
+            </nav>
+            <button id="mobile-menu-btn"
+                class="md:hidden size-10 flex items-center justify-center rounded-full bg-surface-light hover:bg-surface text-white relative z-[70]">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu with improved padding and Z-index -->
+        <div id="mobile-menu"
+            class="fixed inset-0 bg-background-dark/98 backdrop-blur-xl z-[60] transform translate-x-full transition-transform duration-300 md:hidden flex flex-col items-center justify-start gap-8 pt-32 pb-10 overflow-y-auto">
+            <a href="index.html" class="text-2xl font-serif text-primary">Beranda</a>
+            <a href="about.html" class="text-2xl font-serif text-white hover:text-primary transition-colors">Tentang
+                Kami</a>
+            <a href="services.html"
+                class="text-2xl font-serif text-white hover:text-primary transition-colors">Layanan</a>
+            <a href="blog.html" class="text-2xl font-serif text-white hover:text-primary transition-colors">Artikel</a>
+            <a href="contact.html"
+                class="text-2xl font-serif text-white hover:text-primary transition-colors">Kontak</a>
+
+            <div class="mt-8 flex gap-4">
+                <a href="#"
+                    class="size-12 rounded-full border border-white/10 flex items-center justify-center text-white"><span
+                        class="material-symbols-outlined">mail</span></a>
+                <a href="#"
+                    class="size-12 rounded-full border border-white/10 flex items-center justify-center text-white"><span
+                        class="material-symbols-outlined">call</span></a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+            <div class="absolute inset-0 bg-grid-pattern opacity-20 pointer-events-none"></div>
+            <!-- Gradient Orbs -->
+            <div
+                class="absolute top-20 right-0 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] pointer-events-none">
+            </div>
+            <div
+                class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[120px] pointer-events-none">
+            </div>
+
+            <div
+                class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10 text-center lg:text-left">
+                <div class="order-2 lg:order-1 space-y-6">
+                    <div
+                        class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface border border-primary/30 text-primary text-xs font-bold uppercase tracking-widest shadow-[0_0_10px_rgba(14,165,233,0.2)]">
+                        <span class="size-2 bg-primary rounded-full animate-pulse"></span>
+                        Available for Booking 2025/2026
+                    </div>
+                    <h1 class="text-5xl lg:text-7xl font-serif font-medium leading-tight">
+                        Suara yang <br /> <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400 italic">Menggerakkan</span>
+                    </h1>
+                    <p class="text-white/70 text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        Selamat datang di website resmi Muhammad Affizar Ibrahim Alkuatsar. Profesional MC, Public
+                        Speaker, dan Motivator Pelajar dengan rekam jejak kepemimpinan yang teruji.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+                        <a href="contact.html"
+                            class="inline-flex justify-center items-center gap-2 bg-primary text-background-dark px-8 py-4 rounded-full font-bold hover:bg-white hover:scale-105 transition-all shadow-[0_4px_20px_rgba(14,165,233,0.4)]">
+                            Hubungi Saya <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                        </a>
+                        <a href="about.html"
+                            class="inline-flex justify-center items-center gap-2 bg-surface border border-white/10 px-8 py-4 rounded-full font-bold hover:bg-surface-light hover:border-white/30 transition-all">
+                            Lihat Profil
+                        </a>
+                    </div>
+                </div>
+
+                <div class="order-1 lg:order-2 relative group mx-auto max-w-sm lg:max-w-md">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-tr from-primary to-blue-600 rounded-[3rem] rotate-6 group-hover:rotate-3 transition-transform opacity-70 blur-lg">
+                    </div>
+                    <div class="relative bg-surface rounded-[3rem] border border-white/10 overflow-hidden aspect-[3/4]">
+                        <!-- ILLUSTRATION IMAGE HERE -->
+                        <img src="assets/images/hero.png" alt="Muhammad Affizar on Stage"
+                            class="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-700">
+                        <div
+                            class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-background-dark to-transparent">
+                            <p class="text-xl font-serif">Muhammad Affizar</p>
+                            <p class="text-primary text-sm uppercase tracking-widest">Public Speaker & Leader</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievement Ticker -->
+        <div
+            class="bg-primary/90 backdrop-blur overflow-hidden py-4 -rotate-1 shadow-lg relative z-20 border-y border-white/20">
+            <div
+                class="flex gap-12 whitespace-nowrap animate-marquee items-center text-background-dark font-black uppercase tracking-widest text-sm">
+                <span>Rank 1 Kelas IX</span> <span class="size-2 bg-background-dark rounded-full"></span>
+                <span>Ketua OSIS 2 Periode</span> <span class="size-2 bg-background-dark rounded-full"></span>
+                <span>Ketua Forum OSIS SMK Jember</span> <span class="size-2 bg-background-dark rounded-full"></span>
+                <span>Leader of Skaga Wonderfull</span> <span class="size-2 bg-background-dark rounded-full"></span>
+                <span>MC Profesional</span> <span class="size-2 bg-background-dark rounded-full"></span>
+                <span>Rank 6 Paralel</span> <span class="size-2 bg-background-dark rounded-full"></span>
+                <span>Public Speaking Coach</span> <span class="size-2 bg-background-dark rounded-full"></span>
+                <span>Rank 1 Kelas IX</span> <span class="size-2 bg-background-dark rounded-full"></span>
+                <span>Ketua OSIS 2 Periode</span> <span class="size-2 bg-background-dark rounded-full"></span>
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <section class="py-24 px-6 relative">
+            <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-16 items-center">
+                <div class="md:w-1/2 space-y-8">
+                    <span class="text-primary font-bold uppercase tracking-widest text-sm flex items-center gap-2">
+                        <span
+                            class="size-10 bg-primary/20 rounded-full flex items-center justify-center text-primary"><span
+                                class="material-symbols-outlined text-sm">person</span></span>
+                        Tentang Saya
+                    </span>
+                    <h2 class="text-4xl md:text-5xl font-serif leading-tight">Berawal Dari Pemimpi, Menjadi <span
+                            class="text-primary italic">Pemimpin</span>.</h2>
+                    <p class="text-white/70 leading-relaxed text-lg">
+                        Perjalanan kepemimpinan saya dimulai dari menjadi Ketua OSIS selama dua periode berturut-turut
+                        (2023-2025) dan dipercaya memimpin Forum OSIS SMK Kabupaten Jember.
+                    </p>
+                    <p class="text-white/70 leading-relaxed">
+                        Saya percaya bahwa <strong class="text-white">"Kata-kata memiliki kekuatan untuk mengubah
+                            dunia"</strong>. Itulah mengapa saya mendedikasikan diri tidak hanya untuk berbicara, tapi
+                        untuk menggerakkan.
+                    </p>
+
+                    <div class="flex gap-4 pt-2">
+                        <div class="flex flex-col">
+                            <span class="text-3xl font-bold text-white">100+</span>
+                            <span class="text-xs text-primary uppercase tracking-wider">Jam Terbang</span>
+                        </div>
+                        <div class="w-px bg-white/10 h-10 my-auto"></div>
+                        <div class="flex flex-col">
+                            <span class="text-3xl font-bold text-white">50+</span>
+                            <span class="text-xs text-primary uppercase tracking-wider">Event Sukses</span>
+                        </div>
+                    </div>
+
+                    <a href="about.html"
+                        class="inline-block bg-white/5 border border-white/10 px-6 py-3 rounded-xl text-white hover:bg-primary hover:text-background-dark transition-all">Baca
+                        Profil Lengkap</a>
+                </div>
+                <div class="md:w-1/2 relative">
+                    <div class="aspect-square bg-surface rounded-[2rem] overflow-hidden border border-white/5 relative">
+                        <!-- ILLUSTRATION IMAGE HERE -->
+                        <img src="assets/images/about.png" alt="Leadership Illustration"
+                            class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent">
+                        </div>
+                        <div class="absolute bottom-6 left-6 right-6">
+                            <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
+                                <p class="italic text-sm text-white">"Leadership is action, not position."</p>
+                                <p class="text-xs text-primary mt-1 font-bold">- Donald H. McGannon</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Me Section (New) -->
+        <section class="py-24 bg-surface relative overflow-hidden">
+            <div
+                class="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[100px] pointer-events-none">
+            </div>
+            <div class="max-w-7xl mx-auto px-6 relative z-10">
+                <div class="text-center mb-16">
+                    <span class="text-primary font-bold uppercase tracking-widest text-sm">Value Proposition</span>
+                    <h2 class="text-4xl md:text-5xl font-serif mt-2">Mengapa Memilih Saya?</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div
+                        class="bg-background-dark p-8 rounded-3xl border border-white/5 flex flex-col items-center text-center hover:border-primary/50 transition-colors">
+                        <div
+                            class="size-16 bg-gradient-to-br from-primary to-blue-600 rounded-2xl flex items-center justify-center text-white mb-6 shadow-lg shadow-primary/20">
+                            <span class="material-symbols-outlined text-3xl">psychology</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Experienced Leader</h3>
+                        <p class="text-white/60 text-sm">Pengalaman nyata memimpin organisasi besar (OSIS & Forum OSIS)
+                            memberikan perspektif matang dalam setiap sesi motivasi.</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div
+                        class="bg-background-dark p-8 rounded-3xl border border-white/5 flex flex-col items-center text-center hover:border-primary/50 transition-colors">
+                        <div
+                            class="size-16 bg-gradient-to-br from-primary to-blue-600 rounded-2xl flex items-center justify-center text-white mb-6 shadow-lg shadow-primary/20">
+                            <span class="material-symbols-outlined text-3xl">mic_external_on</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Adaptive Speaker</h3>
+                        <p class="text-white/60 text-sm">Mampu menyesuaikan gaya bahasa dan penyampaian untuk audiens
+                            formal (pejabat/guru) maupun audiens non-formal (pelajar).</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div
+                        class="bg-background-dark p-8 rounded-3xl border border-white/5 flex flex-col items-center text-center hover:border-primary/50 transition-colors">
+                        <div
+                            class="size-16 bg-gradient-to-br from-primary to-blue-600 rounded-2xl flex items-center justify-center text-white mb-6 shadow-lg shadow-primary/20">
+                            <span class="material-symbols-outlined text-3xl">verified</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Proven Track Record</h3>
+                        <p class="text-white/60 text-sm">Prestasi akademik (Rank 1) dan non-akademik yang sejalan,
+                            menjadi bukti bahwa keseimbangan itu nyata dan bisa dicapai.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery / Recent Activity (New) -->
+        <section class="py-24 px-6">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex justify-between items-end mb-12">
+                    <div>
+                        <span class="text-primary font-bold uppercase tracking-widest text-sm">Dokumentasi</span>
+                        <h2 class="text-4xl md:text-5xl font-serif mt-2">Momen Terbaik</h2>
+                    </div>
+                    <a href="#"
+                        class="hidden md:flex items-center gap-2 text-sm font-bold text-white hover:text-primary transition-colors">Lihat
+                        Semua <span class="material-symbols-outlined">arrow_forward</span></a>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4 h-[600px] md:h-[400px]">
+                    <!-- Large Item -->
+                    <div class="md:col-span-2 md:row-span-2 relative rounded-3xl overflow-hidden group">
+                        <img src="assets/images/hero.png"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
+                        <div class="absolute bottom-6 left-6">
+                            <span
+                                class="bg-primary text-background-dark text-xs font-bold px-3 py-1 rounded-full uppercase">Seminar</span>
+                            <h3 class="text-white font-bold text-xl mt-2">Leadership Training 2025</h3>
+                        </div>
+                    </div>
+                    <!-- Small Item 1 -->
+                    <div class="relative rounded-3xl overflow-hidden group">
+                        <img src="assets/images/service.png"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
+                        <div class="absolute bottom-6 left-6">
+                            <h3 class="text-white font-bold text-lg">MC Event</h3>
+                        </div>
+                    </div>
+                    <!-- Small Item 2 -->
+                    <div class="relative rounded-3xl overflow-hidden group">
+                        <img src="assets/images/about.png"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
+                        <div class="absolute bottom-6 left-6">
+                            <h3 class="text-white font-bold text-lg">Organisasi</h3>
+                        </div>
+                    </div>
+                    <!-- Wide Item -->
+                    <div class="md:col-span-2 relative rounded-3xl overflow-hidden group">
+                        <img src="assets/images/blog.png"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
+                        <div class="absolute bottom-6 left-6">
+                            <h3 class="text-white font-bold text-lg">Workshop Futsal</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-24 px-6 relative overflow-hidden">
+            <div class="absolute inset-0 bg-primary/10"></div>
+            <div
+                class="max-w-4xl mx-auto text-center relative z-10 p-12 rounded-3xl bg-surface/50 backdrop-blur-md border border-white/10">
+                <h2 class="text-4xl md:text-5xl font-serif mb-6">Siap Membuat Event Anda <br /><span
+                        class="text-primary">Luar Biasa?</span></h2>
+                <p class="text-white/70 text-lg mb-8 max-w-2xl mx-auto">
+                    Jangan biarkan acara Anda berjalan biasa saja. Hadirkan energi profesional dan kepemimpinan yang
+                    kuat bersama Muhammad Affizar.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="https://wa.me/6281234567890"
+                        class="bg-primary text-background-dark font-bold px-8 py-4 rounded-full hover:bg-white transition-all shadow-lg flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined">chat</span> Chat WhatsApp
+                    </a>
+                    <a href="services.html"
+                        class="bg-surface border border-white/10 text-white font-bold px-8 py-4 rounded-full hover:bg-surface-light transition-all flex items-center justify-center gap-2">
+                        Lihat Paket Layanan
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface pt-16 pb-8 px-6 border-t border-white/5 relative z-10">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+            <div class="md:col-span-2 space-y-6">
+                <div class="flex items-center gap-2">
+                    <div class="size-8 bg-primary rounded-lg flex items-center justify-center">
+                        <span class="font-serif font-bold text-white">A</span>
+                    </div>
+                    <span class="font-bold text-xl uppercase tracking-tight">Affizar</span>
+                </div>
+                <p class="text-white/50 text-sm leading-relaxed max-w-sm">
+                    Membangun generasi muda yang berkarakter, berani berbicara, dan siap memimpin masa depan.
+                </p>
+            </div>
+            <div>
+                <h4 class="text-primary font-bold uppercase tracking-widest text-xs mb-6">Navigasi</h4>
+                <div class="flex flex-col gap-3">
+                    <a href="index.html" class="text-white/60 hover:text-white transition-colors text-sm">Beranda</a>
+                    <a href="about.html" class="text-white/60 hover:text-white transition-colors text-sm">Tentang</a>
+                    <a href="services.html" class="text-white/60 hover:text-white transition-colors text-sm">Layanan</a>
+                    <a href="contact.html" class="text-white/60 hover:text-white transition-colors text-sm">Kontak</a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-primary font-bold uppercase tracking-widest text-xs mb-6">Kontak</h4>
+                <div class="flex flex-col gap-3">
+                    <a href="#"
+                        class="text-white/60 hover:text-white transition-colors text-sm flex items-center gap-2">
+                        <span class="material-symbols-outlined text-xs">mail</span> hello@affizar.com
+                    </a>
+                    <a href="#"
+                        class="text-white/60 hover:text-white transition-colors text-sm flex items-center gap-2">
+                        <span class="material-symbols-outlined text-xs">call</span> +62 812-3456-7890
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div
+            class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-white/30 uppercase tracking-widest">
+            <p>© 2026 Affizar Official. All Rights Reserved.</p>
+            <p>Jember, Jawa Timur</p>
+        </div>
+    </footer>
+
+    <!-- Floating Action Buttons -->
+    <div class="fixed bottom-6 right-6 z-[60] flex flex-col gap-4 items-center">
+        <!-- Scroll Top -->
+        <button id="scrollToTop"
+            class="size-12 bg-surface border border-white/20 text-white rounded-full flex items-center justify-center shadow-lg opacity-0 translate-y-4 transition-all duration-300 pointer-events-none data-[visible=true]:opacity-100 data-[visible=true]:translate-y-0 data-[visible=true]:pointer-events-auto hover:bg-primary hover:border-primary">
+            <span class="material-symbols-outlined">arrow_upward</span>
+        </button>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/6281234567890" target="_blank"
+            class="size-14 bg-green-500 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:scale-110 transition-transform animate-bounce-subtle group relative">
+            <span class="absolute right-0 top-0 flex h-3 w-3">
+                <span
+                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-200 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
+            </span>
+            <svg fill="currentColor" width="28" height="28" viewBox="0 0 16 16">
+                <path
+                    d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93a7.898 7.898 0 0 0-2.327-5.607zM7.994 14.52a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+            </svg>
+        </a>
+    </div>
+
+    <script>
+        // Style for marquee
+        const style = document.createElement('style');
+        style.innerHTML = `
+      @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+      .animate-marquee {
+        animation: marquee 25s linear infinite;
+      }
+    `;
+        document.head.appendChild(style);
+
+        // Mobile Menu
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const closeBtn = document.getElementById('mobile-menu'); // Click overlay to close too? No, usually a separate button. Let's use menuBtn to toggle for now or add a close inside.
+        // Wait, the mobile menu in the HTML above doesn't have a close button explicitly? 
+        // It's just a div. I'll make the menu toggle on button click.
+        const menu = document.getElementById('mobile-menu');
+
+        // Add close button logic inside menu if user clicks 'close' button we added in HTML??
+        // Actually in my HTML above (Step 1 write) I didn't add a close button explicitly inside the mobile menu div,
+        // I just relied on the menu toggle. I should probably add one or make the menu button toggle.
+        // Let's make the menu button act as toggle.
+
+        let isMenuOpen = false;
+        menuBtn.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                menu.classList.remove('translate-x-full');
+                menuBtn.innerHTML = '<span class="material-symbols-outlined">close</span>';
+                document.body.style.overflow = 'hidden';
+            } else {
+                menu.classList.add('translate-x-full');
+                menuBtn.innerHTML = '<span class="material-symbols-outlined">menu</span>';
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Close on link click
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                isMenuOpen = false;
+                menu.classList.add('translate-x-full');
+                menuBtn.innerHTML = '<span class="material-symbols-outlined">menu</span>';
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Scroll Top
+        const scrollBtn = document.getElementById('scrollToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                scrollBtn.setAttribute('data-visible', 'true');
+            } else {
+                scrollBtn.setAttribute('data-visible', 'false');
+            }
+        });
+        scrollBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+    </script>
+</body>
+
+</html>
